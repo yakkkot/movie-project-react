@@ -17,7 +17,7 @@ const GenreMoviesPage = () => {
     console.log(errors)
     const need = genres.find(value => value.name.toLowerCase() === genre.toLowerCase());
 
-
+    console.log(movies);
     const change = (num)=>{
         setPage({page: `${num}`})
     }
