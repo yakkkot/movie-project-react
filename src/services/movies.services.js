@@ -1,6 +1,5 @@
 import {axiosServices} from "./axios.services";
 import {urls} from "../configs";
-import {getMoviesWithGenre} from "../redux";
 
 const moviesServices = {
     getAll: (page = 1) => axiosServices.get(urls.movies, {params: {page}}),

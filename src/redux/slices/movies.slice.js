@@ -1,4 +1,5 @@
-import {createSlice, createAsyncThunk,current} from "@reduxjs/toolkit";
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+
 import {moviesServices} from "../../services";
 
 const initialState = {
@@ -198,9 +199,9 @@ const moviesSlice = createSlice({
         [getGenres.fulfilled]: (state, action) => {
             state.genres = action.payload.genres;
         },
-        [getGenres.pending]: (state, action) => {
-            state.loading = true;
-        },
+        // [getGenres.pending]: (state, action) => {
+        //     state.loading = true;
+        // },
 
 
         [getTrendingMovie.fulfilled]: (state, action) => {

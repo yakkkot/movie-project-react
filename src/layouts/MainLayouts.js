@@ -15,9 +15,9 @@ const MainLayouts = () => {
     //     return <Navigate to={`/movies${location.search}`}/>
     // }
     const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(getGenres());
-    }, []);
+    // useEffect(() => {
+    //     dispatch(getGenres());
+    // }, []);
     // const [theme, setTheme] = useLocalStorage('theme' ? 'light' : 'dark')
 
     const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
