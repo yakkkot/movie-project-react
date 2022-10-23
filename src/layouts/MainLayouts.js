@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import {Outlet} from 'react-router-dom'
 import {Header, MoviesList} from "../components";
 import useLocalStorage from "use-local-storage";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {getGenres,switchCssTheme} from "../redux";
 
 
@@ -14,16 +14,18 @@ const MainLayouts = () => {
     // if((location.pathname==='/home') && location.search.includes('?query')){
     //     return <Navigate to={`/movies${location.search}`}/>
     // }
+
+    const {genres} = useSelector(state => state.movies);
+
     const dispatch = useDispatch()
-    // useEffect(() => {
-    //     dispatch(getGenres());
-    // }, []);
-    // const [theme, setTheme] = useLocalStorage('theme' ? 'light' : 'dark')
+    useEffect(() => {
+        dispatch(getGenres());
+    }, []);
+    console.log(genres)
 
     const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
     dispatch(switchCssTheme(theme));
     const switchTheme = () => {
-        // const newTheme = theme === 'light' ? 'light' : 'dark';
 
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme)

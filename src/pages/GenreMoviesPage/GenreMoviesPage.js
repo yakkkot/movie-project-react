@@ -31,23 +31,23 @@ const GenreMoviesPage = () => {
 
     return (
         <>
-            {!errors.genreMovies ?
-                // <div className={`${styles.wrap} pt-[80px]`}>
-                //     <div className={`${styles.container} flex-col`}>
-                //         <div className="w-full px-2 py-2 my-2">
-                //             <div className="grid grid-cols-5 gap-2 items-center">
-                //                 {
-                //                     movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)
-                //                 }
-                //             </div>
-                //         </div>
-                //     </div>
-                //
-                //     <MyPagination maxPage={maxPage} change={change} currentPage={current}/>
-                // </div>
+            {/*{!errors.genreMovies ?*/}
+            {/*    // <div className={`${styles.wrap} pt-[80px]`}>*/}
+            {/*    //     <div className={`${styles.container} flex-col`}>*/}
+            {/*    //         <div className="w-full px-2 py-2 my-2">*/}
+            {/*    //             <div className="grid grid-cols-5 gap-2 items-center">*/}
+            {/*    //                 {*/}
+            {/*    //                     movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)*/}
+            {/*    //                 }*/}
+            {/*    //             </div>*/}
+            {/*    //         </div>*/}
+            {/*    //     </div>*/}
+            {/*    //*/}
+            {/*    //     <MyPagination maxPage={maxPage} change={change} currentPage={current}/>*/}
+            {/*    // </div>*/}
                 <MoviesList maxPage={maxPage} change={change} currentPage={current}/>
-                : <Error/>
-            }
+            {/*//     : <Error/>*/}
+            {/*// }*/}
         </>
     );
 };
