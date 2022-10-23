@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background: #0E0E0F;
+    --text-primary: rgb(254 242 242);
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #333;
+    --form-bg: #fff;
+    --text-shadow: -0.5px 0px 2px rgba(160,39,39,0.9);
+}
+
+[data-theme='light'] {
+    --background: #e7dbdb;
+    --text-primary: rgb(35, 0, 0);
+    /*--text-primary: rgb(210, 112, 139);*/
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #808080;
+    --form-bg: #191919;
+    --text-shadow: 0px 0px 0px rgb(0, 0, 0);
+}
+body {
+    /*background-color: #0E0E0F;*/
+    /*text-shadow: -0.5px 0px 2px rgba(160,39,39,0.9);*/
+    /*color: rgb(254 242 242);*/
+    /*background-color: #dabdbd;*/
+    /*color: rgb(44, 2, 2);*/
+
+}
+
+.app {
+    color: var(--text-primary);
+    font-size: .8rem;
+    transition: all 0.4s;
+    background-color: var(--background);
+    text-shadow: var(--text-shadow);
+}
+.show_info {
+    color: white;
+    transition: 0.3s;
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    background-color: #600F0F;
+}
+
+.movie_card:hover .show_info{
+    opacity: 1;
+}
+
+
+.text_shadow_all{
+    text-shadow: -0.5px 0px 2px rgba(160,39,39,0.9);
+}
+
+.z_index_header{
+    z-index: 110;
+}
+.z_index_genre{
+    z-index: 100;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #640E10;
+    width: 35%;
+    z-index: 15;
+    border-radius: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+.mark{
+    transition: 0.3s;
+}
+
+.dropdown:hover .mark {
+    color: #7a0e12;
 }
