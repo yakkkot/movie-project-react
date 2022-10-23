@@ -17,9 +17,11 @@ const MoviesListCard = ({movie}) => {
 
     return (
                 <div onClick={() => anotherMovie(id)}
-                     className="relative hover:scale-105 cursor-pointer transition duration-500 py-1 movie_card">
+                     className="relative hover:scale-105 cursor-pointer h-full transition duration-500 py-1 movie_card">
                     <GenreBadge genre_ids={genre_ids}/>
-                    <PosterPreview movie={movie}/>
+                    {/*{movie.poster_path ? */}
+                        <PosterPreview movie={movie}/>
+                        {/*// : <div className="bg-green-400 h-[100%] w-full absolute">rewr</div>}*/}
                     <div className={"show_info px-2 rounded-b-xl py-1 "}>
                         <p className='font-bold'>{title}</p>
                         <StarsRating key={id} vote_average={vote_average}/>
