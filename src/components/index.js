@@ -14,3 +14,4 @@ export * from './MoviesList/MoviesList';
 export * from './SwitcherTheme/SwitcherTheme';
 export * from './Spinner/Spinner';
 export * from './Error/Error';
+export * from './UserInfo/UserInfo'

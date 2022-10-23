@@ -2,6 +2,7 @@ import {axiosServices} from "./axios.services";
 import {urls} from "../configs";
 
 const moviesServices = {
+    getAccout: () => axiosServices.get(urls.account),
     getAll: (page = 1) => axiosServices.get(urls.movies, {params: {page}}),
     getOneMovie: (id) => axiosServices.get(`${urls.movie}/${id}`),
     getTrendingMovie: () => axiosServices.get(urls.trending),

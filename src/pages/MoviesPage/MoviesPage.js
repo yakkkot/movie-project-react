@@ -11,7 +11,7 @@ const MoviesPage = () => {
     const {errors,maxPage} = useSelector(state => state.movies);
 
     const [page, setPage] = useSearchParams({page: `1`});
-    const [query, setQuery] = useSearchParams();
+    const [query, setQuery] = useSearchParams({page: `1`});
 
     const current = !query.get('query') ? +page.get('page') : +query.get('page') || 1
     const change = (num) => {
@@ -38,6 +38,7 @@ const MoviesPage = () => {
             }
         </>
     );
+
 };
 
 export {MoviesPage};

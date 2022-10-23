@@ -3,7 +3,9 @@ import React from 'react';
 import {TailSpin} from "react-loader-spinner";
 import {styles} from "../../configs";
 
+
 const Spinner = () => {
+
     return (
         <div className={`${styles.wrap} justify-center h-screen`}>
             <TailSpin

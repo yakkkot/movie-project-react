@@ -7,7 +7,7 @@ import "swiper/css";
 import {styles} from "../../configs";
 import {MoviesListCard} from "../index";
 
-const SliderMovie = ({movies,header,seconds,sliders}) => {
+const SliderMovie = ({movies, header, seconds, sliders}) => {
 
 
     return (

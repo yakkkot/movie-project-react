@@ -6,6 +6,7 @@ import {BsFillPlayFill, BsStarFill} from "react-icons/bs";
 import {TbMinusVertical} from "react-icons/tb";
 import {GenreBadge,PosterPreview} from "../../index";
 
+
 const Slide = ({value}) => {
     return (
         <div className={`${styles.wrap} h-screen text-3xl`}

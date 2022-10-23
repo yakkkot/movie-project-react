@@ -3,6 +3,7 @@ import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import {moviesServices} from "../../services";
 
 const initialState = {
+    account: null,
     movies: [],
     maxPage: 1,
     genres: [],
@@ -21,10 +22,23 @@ const initialState = {
         trendingMovie: null,
         topRatedMovie: null,
         movieInfo: null,
-        credits: null,
         searchMovie: null,
     }
 };
+
+
+export const getAccout = createAsyncThunk(
+    'moviesSlice/getAccout',
+    async (id,{rejectWithValue})=>{
+        try {
+            const {data} = await moviesServices.getAccout();
+            return data;
+        }
+        catch (e){
+            return rejectWithValue(e.response.data)
+        }
+    }
+);
 
 export const getMovies = createAsyncThunk(
     'moviesSlice/getMovies',
@@ -179,6 +193,10 @@ const moviesSlice = createSlice({
 
     extraReducers:{
 
+        [getAccout.fulfilled]: (state, action) => {
+            state.account = action.payload;
+        },
+
         [getMovies.fulfilled]: (state, action) => {
             state.movies = action.payload.results;
             state.maxPage = action.payload.total_pages;
@@ -199,9 +217,6 @@ const moviesSlice = createSlice({
         [getGenres.fulfilled]: (state, action) => {
             state.genres = action.payload.genres;
         },
-        // [getGenres.pending]: (state, action) => {
-        //     state.loading = true;
-        // },
 
 
         [getTrendingMovie.fulfilled]: (state, action) => {

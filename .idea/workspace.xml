@@ -6,9 +6,36 @@
   <component name="ChangeListManager">
     <list default="true" id="61265e44-1a9e-4bc2-a1c6-45006d1f5204" name="Changes" comment="First">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FindForm/FindForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FindForm/FindForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenreBadge/GenreBadge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenreBadge/GenreBadge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Genres/Genres.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Genres/Genres.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Genres/mini.components/OneGenre.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Genres/mini.components/OneGenre.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesList/MoviesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesList/MoviesList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MoviesListCard/MoviesListCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesListCard/MoviesListCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyPagination/MyPagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyPagination/MyPagination.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PosterPreview/PosterPreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PosterPreview/PosterPreview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SliderMovie/SliderMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SliderMovie/SliderMovie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StarsRating/StarsRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StarsRating/StarsRating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SwitcherTheme/SwitcherTheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwitcherTheme/SwitcherTheme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TrendingMovie/components/Slide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrendingMovie/components/Slide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserInfo/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configs/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configs/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayouts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/GenreMoviesPage/GenreMoviesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GenreMoviesPage/GenreMoviesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MovieInformationPage/MovieInformationPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MovieInformationPage/MovieInformationPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage/MoviesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage/MoviesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/movies.slice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/movies.slice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/movies.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movies.services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666009405868</updated>
       <workItem from="1666009408636" duration="7238000" />
-      <workItem from="1666038863238" duration="162356000" />
+      <workItem from="1666038863238" duration="176291000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1666540371304</created>
@@ -120,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666542297683</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="First">
+      <created>1666544667227</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666544667227</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

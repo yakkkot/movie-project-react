@@ -11,7 +11,7 @@ const MyPagination = ({maxPage,change,currentPage}) => {
 
                 <Pagination
                     onChange={(_, num) => change(num)}
-                    activeProps={{ style: { back: 'bold' } }}
+                    activeProps={{style: {back: 'bold'}}}
                     page={currentPage}
                     showFirstButton
                     showLastButton

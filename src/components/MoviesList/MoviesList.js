@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
-import {useDispatch,useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
-
-import {MoviesListCard, MyPagination,Spinner,Error} from "../index";
+import {MoviesListCard, MyPagination,Spinner} from "../index";
 import {styles} from "../../configs";
 
 

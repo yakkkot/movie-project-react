@@ -11,12 +11,12 @@ const GenreBadge = ({genre_ids}) => {
 
     return (
         <CornerRibbon
-            position="top-right" // OPTIONAL, default as "top-right"
-            fontColor="#f0f0f0" // OPTIONAL, default as "#f0f0f0"
-            backgroundColor="#600F0F" // OPTIONAL, default as "#2c7"
-            containerStyle={{}} // OPTIONAL, style of the ribbon
-            style={{}} // OPTIONAL, style of ribbon content
-            className="" // OPTIONAL, css class of ribbon
+            position="top-right"
+            fontColor="#f0f0f0"
+            backgroundColor="#600F0F"
+            containerStyle={{}}
+            style={{}}
+            className=""
         >
             {genreMovie?.name}
         </CornerRibbon>

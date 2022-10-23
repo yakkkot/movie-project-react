@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {useDispatch, useSelector} from "react-redux";
-import {getGenres, getTopRatedMovie, getTrendingMovie} from "../../redux";
+import {getTopRatedMovie, getTrendingMovie} from "../../redux";
 
 import {Error, TrendingMovie} from "../../components";
 

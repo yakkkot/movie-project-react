@@ -7,6 +7,7 @@ const urls={
     movie: 'movie',
     search: 'search/movie',
     top_rated: '/movie/top_rated',
+    account: 'account',
 }
 
 export {

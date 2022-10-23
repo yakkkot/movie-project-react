@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 import {styles} from "../../configs";
 import {OneGenre} from "./mini.components/OneGenre";
 
-const Genres = ({switcher}) => {
+const Genres = () => {
 
     const {genres} = useSelector(state => state.movies);
 
