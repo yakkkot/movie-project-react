@@ -12,10 +12,12 @@ import {getTrailerVideo} from "../../../redux";
 const Slide = ({value,setShowModal}) => {
 
     const dispatch = useDispatch();
+
     const click = async()=>{
         await dispatch(getTrailerVideo(value.id))
         await setShowModal(true);
     }
+
     return (
         <div className={`${styles.wrap} h-screen text-3xl text-red-50 text_shadow_all`}
              style={{
@@ -27,12 +29,11 @@ const Slide = ({value,setShowModal}) => {
             <div className={`${styles.container} gap-[12%]`}>
                 <div className="w-[55%] flex flex-col gap-[40px]">
                     <h1 className="text-6xl font-bold">{value?.title}</h1>
-                    <div className="flex items-center text-base">
+                    <div className="flex items-center text-base text-sm">
                         <BsStarFill className="text-yellow-400 mr-2"/>
                         <p>{value?.vote_average.toFixed(1)}</p>
                         <TbMinusVertical/>
-                        <p className="text-sm">{value?.vote_count}</p>
-
+                        <p className="mr-4">{value?.vote_count} votes</p>
                     </div>
                     <p className={`${styles.p_text}`}>{value?.overview}</p>
                     <div className="flex items-center gap-[30px]">

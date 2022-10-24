@@ -48,7 +48,6 @@ export const getMovies = createAsyncThunk(
             return data;
         }
         catch (e){
-            console.log(e);
             return rejectWithValue(e.response.data)
         }
     }
@@ -62,7 +61,6 @@ export const getGenres = createAsyncThunk(
             return data;
         }
         catch (e){
-            console.log(e);
             return rejectWithValue(e.response.data)
         }
     }
@@ -77,8 +75,6 @@ export const getTrendingMovie = createAsyncThunk(
             return data;
         }
         catch(e){
-            console.log(rejectWithValue(e.response.data));
-
             return rejectWithValue(e.response.data)
         }
     }
@@ -92,7 +88,6 @@ export const getTopRatedMovie = createAsyncThunk(
             return data;
         }
         catch(e){
-            console.log(e);
             return rejectWithValue(e.response.data)
         }
     }
@@ -106,7 +101,6 @@ export const getAllInformationMovie = createAsyncThunk(
             return data;
         }
         catch(e){
-            console.log(e.response.data);
             return rejectWithValue(e.response.data)
         }
     }
@@ -120,7 +114,6 @@ export const getCredits = createAsyncThunk(
             return data;
         }
         catch(e){
-            console.log(e);
             return rejectWithValue(e.response.data)
         }
     }
@@ -134,7 +127,7 @@ export const getSimilarMovies = createAsyncThunk(
             return data;
         }
         catch(e){
-            console.log(e);
+            return rejectWithValue(e.response.data)
         }
     }
 );
@@ -147,7 +140,7 @@ export const getTrailerVideo = createAsyncThunk(
             return data;
         }
         catch(e){
-            console.log(e);
+            return rejectWithValue(e.response.data)
         }
     }
 );
@@ -160,11 +153,11 @@ export const getSearchMovie = createAsyncThunk(
             return data;
         }
         catch(e){
-            console.log(e.message);
-            // return e.message
+            return rejectWithValue(e.response.data)
         }
     }
 );
+
 export const getMoviesWithGenre = createAsyncThunk(
     'moviesSlice/getMoviesWithGenre',
     async ({id,page}, {rejectWithValue}) => {
@@ -173,7 +166,6 @@ export const getMoviesWithGenre = createAsyncThunk(
             return data;
         }
         catch(e) {
-            console.log(e.message);
             return rejectWithValue(e.response.data)
         }
     }

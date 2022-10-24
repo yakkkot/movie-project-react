@@ -8,7 +8,7 @@ import {SliderMovie,Spinner} from "../index";
 const MovieInfo = () => {
 
     const {similarMovies,loading} = useSelector(state => state.movies);
-    console.log(similarMovies)
+
     return (
         <>
             {!loading ?

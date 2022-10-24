@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 import {Outlet} from 'react-router-dom'
 import {Header} from "../components";
 import useLocalStorage from "use-local-storage";
 import {useDispatch} from "react-redux";
-import {getAccout, getGenres, switchCssTheme} from "../redux";
+import {switchCssTheme} from "../redux";
 
 
 
@@ -27,10 +27,6 @@ const MainLayouts = () => {
 
     ((theme==='light') ? document.body.style.backgroundColor = "#e7dbdb" : document.body.style.backgroundColor = "#0E0E0F")
 
-    useEffect(() => {
-        dispatch(getGenres());
-        dispatch(getAccout())
-    }, []);
 
     return (
         <div className="app" data-theme={theme}>
