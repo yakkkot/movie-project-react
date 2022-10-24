@@ -10,10 +10,11 @@ import {getAllInformationMovie, getCredits, getSimilarMovies, getTrailerVideo} f
 
 const MovieInformationPage = () => {
 
+    const {id} = useParams();
+
     const dispatch = useDispatch();
     const {errors} = useSelector(state => state.movies);
 
-    const {id} = useParams();
 
     useEffect(() => {
         dispatch(getAllInformationMovie(id));

@@ -8,11 +8,12 @@ import {Error, MoviesList} from "../../components";
 
 const GenreMoviesPage = () => {
 
+    const {id,value: genre} = useParams();
+    const [page, setPage] = useSearchParams({page: `1`})
+
     const dispatch = useDispatch();
     const {maxPage, errors} = useSelector(state => state.movies);
 
-    const {id,value: genre} = useParams();
-    const [page, setPage] = useSearchParams({page: `1`})
 
     // const need = genres.find(value => value.name.toLowerCase() === genre.toLowerCase());
 
