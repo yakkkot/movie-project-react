@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Autoplay} from "swiper";
@@ -6,13 +6,14 @@ import "swiper/css";
 import "swiper/css/autoplay"
 
 import {Slide} from "./components/Slide";
-import {SliderMovie,Spinner} from "../index"
+import {SliderMovie,Spinner,ModalWindow} from "../index"
 import {styles} from "../../configs";
 import {useSelector} from "react-redux";
 
 
 const TrendingMovie = () => {
 
+    const [showModal,setShowModal] = useState(false)
     const {trendingMovie,topRatedMovie,loading,errors} = useSelector(state => state.movies);
 
     return (
@@ -31,10 +32,10 @@ const TrendingMovie = () => {
 
                         {trendingMovie.slice(0, 3).map(value =>
                             <SwiperSlide key={value.id}>
-                                <Slide value={value}/>
+                                <Slide value={value} setShowModal={setShowModal}/>
                             </SwiperSlide>)}
                     </Swiper>
-                    <div className={`${styles.wrap} h-screen py-1`}>
+                    <div className={`${styles.wrap} py-1`}>
                         <div className={`${styles.container} flex-col gap-[5%] mb-1`}>
                             <SliderMovie movies={trendingMovie} header={'Trending Movies'} seconds={3000} sliders={6}/>
                             {!errors.topRatedMovie &&
@@ -43,7 +44,7 @@ const TrendingMovie = () => {
                             }
                         </div>
                     </div>
-
+                    <ModalWindow setShowModal={setShowModal} showModal={showModal}/>
                 </div>
                 : <Spinner/>}
         </>

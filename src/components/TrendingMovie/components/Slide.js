@@ -5,11 +5,19 @@ import {styles} from "../../../configs";
 import {BsFillPlayFill, BsStarFill} from "react-icons/bs";
 import {TbMinusVertical} from "react-icons/tb";
 import {GenreBadge,PosterPreview} from "../../index";
+import {useDispatch} from "react-redux";
+import {getTrailerVideo} from "../../../redux";
 
 
-const Slide = ({value}) => {
+const Slide = ({value,setShowModal}) => {
+
+    const dispatch = useDispatch();
+    const click = async()=>{
+        await dispatch(getTrailerVideo(value.id))
+        await setShowModal(true);
+    }
     return (
-        <div className={`${styles.wrap} h-screen text-3xl`}
+        <div className={`${styles.wrap} h-screen text-3xl text-red-50 text_shadow_all`}
              style={{
                  backgroundImage: `url(https://image.tmdb.org/t/p/original${value?.backdrop_path})`,
                  backgroundPosition: 'center',
@@ -33,7 +41,7 @@ const Slide = ({value}) => {
                                 All information
                             </button>
                         </Link>
-                        <button className={`${styles.button_trailer}`}>
+                        <button onClick={()=>click()} className={`${styles.button_trailer}`}>
                             <BsFillPlayFill size={25}/>
                             Watch trailer
                         </button>

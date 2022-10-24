@@ -29,6 +29,7 @@ const SliderMovie = ({movies, header, seconds, sliders}) => {
                             <SwiperSlide key={movie.id}>
                                 <div className="py-2 px-1.5 cursor-grab">
                                     <MoviesListCard key={movie.id} movie={movie}/>
+                                    <p className="font-bold px-1 py-1 text-[16px]">{movie.title}</p>
                                 </div>
                             </SwiperSlide>)}
                     </Swiper>

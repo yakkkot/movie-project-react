@@ -294,10 +294,10 @@ const moviesSlice = createSlice({
 
 
         [getMoviesWithGenre.fulfilled]: (state, action) => {
+            state.errors.genreMovies = null;
             state.movies = action.payload.results
             state.maxPage = action.payload.total_pages;
             state.loading = false;
-            state.errors.genreMovies = null;
         },
         [getMoviesWithGenre.pending]: (state, action) => {
             state.loading = true;
